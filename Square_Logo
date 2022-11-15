@@ -1,0 +1,17 @@
+import sys
+if sys.version_info[0] == 3:
+    import tkinter as tk
+else:
+    import Tkinter as tk
+import turtle
+t = turtle.Turtle()
+t.left(45)
+for _ in range(4):
+   t.forward(100)
+   t.left(90)
+t.penup()
+t.left(-45)
+for _ in range(4):
+   t.forward(100)
+   t.left(90)
+turtle.exitonclick()
