@@ -4,14 +4,21 @@ if sys.version_info[0] == 3:
 else:
     import Tkinter as tk
 import turtle
-t = turtle.Turtle()
-t.left(45)
-for _ in range(4):
-   t.forward(100)
-   t.left(90)
-t.penup()
-t.left(-45)
-for _ in range(4):
-   t.forward(100)
-   t.left(90)
-turtle.exitonclick()
+alex = turtle.Turtle()
+tess = turtle.Turtle()
+
+for i in range(4):
+    alex.fd(50)
+    alex.lt(90)
+def square(this_turtle, side_length):
+    for i in range(4):
+        this_turtle.fd(side_length)
+        this_turtle.lt(90)
+square(alex, 50)
+tess.pu()
+tess.fd(25)
+tess.rt(90)
+tess.fd(10)
+tess.rt(225)
+tess.pd()
+square(tess, 50)
